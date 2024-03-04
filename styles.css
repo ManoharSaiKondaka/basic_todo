@@ -1,0 +1,147 @@
+/* Reset CSS */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,black,rgb(179, 179, 179))
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    margin-top: 10%;
+    background-color: #afafaf;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Task Input */
+#taskInput {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Task Item */
+.taskItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 0; /* Adjusted padding */
+    border-bottom: 1px solid #eeeeee;
+}
+
+.taskItem.completed > span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.taskItem span {
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word; /* Allow text to wrap onto a new line */
+    flex: 1; /* Allow the text to fill remaining space */
+}
+
+.taskItem input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    /* Create custom checkbox design */
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Actions */
+.taskItem .actions {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    color: #333333;
+    font-size: px;
+}
+
+.taskItem .actions button:hover {
+    background-color: #dddddd;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #afafaf;
+    margin: 10% auto; /* Center the modal vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 60vw; /* 80% of the viewport width */
+    height: 20vw; /* 80% of the viewport height */
+    border-radius: 10px;
+    text-align: center;
+    color: #333333;;
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+.modal-content input {
+    width: 40vw;
+    height: 3vw;
+    word-wrap: break-word;
+}
+
+/* Close button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#saveEditBtn {
+    display: block;
+    margin: 20px auto 0; /* Adjust top margin as needed */
+    width: 10em;
+    height: 3em;
+}
